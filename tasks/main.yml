@@ -1,0 +1,10 @@
+---
+
+# Place the motd file into the system
+- template:
+    src: motd.j2
+    dest: /etc/motd
+    owner: root
+    mode: 0644
+
+...
