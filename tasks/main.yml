@@ -1,7 +1,8 @@
 ---
 
 # Place the motd file into the system
-- template:
+- name: place motd template
+  template:
     src: motd.j2
     dest: /etc/motd
     owner: root
