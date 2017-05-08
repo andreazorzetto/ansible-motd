@@ -10,7 +10,7 @@ node {
    stage('Merge') {
       // Run the maven build
       sh 'git merge develop'
-      sh 'git commit -am "Merged develop branch to master'
+      sh 'git commit -am "Merged develop branch to master"'
       sh "git push origin master"
    }
 }
