@@ -1,9 +1,13 @@
 node {
    stage('Preparation') { // for display purposes
       // Get some code from a GitHub repository
-      git 'https://github.com/andreazorzetto/ansible-motd.git'
+      checkout scm
    }
-   stage('Build') {
+   stage('Test') {
+      // Run the maven build
+      sh "molecule test"
+   }
+   stage('Merge') {
       // Run the maven build
       sh "molecule test"
    }
